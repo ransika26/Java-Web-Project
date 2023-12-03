@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("OIP\ \(1\).jpeg");
+    background-color: #1ca08a;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+#categories-dropdown {
+    margin-right: 10px;
+}
+
+.search-bar {
+    margin-right: 10px;
+}
+.search-bar input{
+    width: 500px;
+    border-style: none;
+    border-radius: 10px;
+    outline: none;
+    height: 20px;
+}
+.search-bar button{
+    border-radius: 10px;
+    margin-left: -40px;
+    color: rgb(22, 24, 24);
+   
+}
+
+#login-btn, #signup-btn, #cart-btn {
+   
+   
+    border-style: solid;
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+}
+
+
+
+/* search bar and buttons align horizontally */
+#search-bar,#login-btn,#signup-btn,#cart-btn {
+    margin: 10px;
+    align-items: center;
+    outline: none;
+  
+}
+#search-bar button:hover {
+  background-color: rgb(226, 43, 43);
+    color: rgb(216, 210, 210); 
+  }
+  #login-btn:hover{
+    background-color: rgb(226, 43, 43);
+    color: rgb(216, 210, 210); 
+  }
+  #cart-btn:hover{
+    background-color: rgb(226, 43, 43);
+    color: rgb(216, 210, 210); 
+  }
+
+  #search-bar:hover{
+    background-color: rgb(226, 43, 43);
+    color: rgb(216, 210, 210); 
+  }
+  #signup-btn:hover{
+    background-color: rgb(226, 43, 43);
+    color: rgb(216, 210, 210); 
+  }
+  
+/* Add margin-right to the logo to separate it from the search bar and buttons */
+.logo {
+    margin-right: 20px;
+}
+
+
+
+/*add drop down manue css*/
+
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 13px;
+    border: none;
+    outline: none;
+    color: rgb(24, 22, 22);
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a red background color to navbar links on hover */
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+    color: rgb(50, 221, 27);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    background-color: transparent;
+    font-size: 13px;
+  }
+  
+  /* background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: rgb(7, 141, 47);
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+  
+  /*hide when responsive Start.................................................................*/
+
+  @media (max-width: 1000px) {
+    .search-bar {
+      display: none;
+    }
+    
+  }
+
+  @media (max-width: 1000px) {
+    #login-btn, #signup-btn, #cart-btn {
+        padding: 8px; /* Adjust padding for smaller screens */
+        font-size: 10px; /* Adjust font size for smaller screens */
+    }
+
+}
+
+@media (max-width: 1000px){
+   #dropdown,#dropdown-content,a,#dropbtn{
+    padding: 8px; /* Adjust padding for smaller screens */
+    font-size: 10px;
+     min-width:100px;
+   }
+}
+
+@media (max-width: 1000px){
+    #logo{
+     width: 60px;
+    }
+ }
+
+
+ 
+@media (max-width: 1000px){
+    header{
+        
+        width: 100%;
+        
+    }
+ }
+ 
+ 
+ /*hide when responsive End.................................................................*/
+
+ /* 2nd navigation bar css */
+
+
+ nav {
+      background-image: url("OIP.jpeg");
+      color: #fff;
+      text-align: center;
+      padding: 0.5em 1;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5em 1em;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+    nav a:hover {
+      background-color: #555;
+    }
