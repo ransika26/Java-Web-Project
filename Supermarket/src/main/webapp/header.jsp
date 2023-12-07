@@ -17,7 +17,7 @@
 
             <div class="dropdown-content" id="dropdown-content">
               <a href="Vegetables.jsp">Vegetables</a>
-              <a href="#">Link 2</a>
+              <a href="bakery.jsp">Bakery</a>
               <a href="#">Link 3</a>
             </div>
 
@@ -40,7 +40,7 @@
     <a href="#">Shop</a> |
     <a href="#">Specials</a> |
     <a href="#">Contact</a>
-    
+      <a href="Admin.jsp">Admin</a>
     
   </nav>
 
