@@ -1,4 +1,2 @@
-com\mycompany\supermarket\resources\JakartaEE10Resource.class
-com\mycompany\supermarket\Items.class
 com\mycompany\supermarket\JakartaRestConfiguration.class
-com\mycompany\supermarket\ImageUploadServlet.class
+com\mycompany\supermarket\resources\JakartaEE10Resource.class
