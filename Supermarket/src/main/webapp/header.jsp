@@ -1,52 +1,101 @@
+<%-- 
+    Document   : Header.jsp
+    Created on : Dec 19, 2023, 10:03:48?AM
+    Author     : Gayan Wickz
+--%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keells Online</title>
-    <link rel="stylesheet" href="header.css"/>
+    <title> Green Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    
+      <link rel="stylesheet" href="snowfall.css">
+<script src="snowfall.js" defer></script>
    
+    
 </head>
 <body>
+    <header class="header">
 
-    <header id="header">
-        <img src="Porsche-Emblem.png" alt="Logo" id="logo" class="logo">
-       
-        <div class="dropdown">
-            <button class="dropbtn" id="dropbtn">Categories</button>
+        <a href="index.jsp" class="logo"><i class="fas fa-shopping-basket"></i> Green Mart</a>
 
-            <div class="dropdown-content" id="dropdown-content">
-              <a href="Vegetables.jsp">Vegetables</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
+        <nav class="navbar">
+            <a href="index.jsp">Home</a>
+            
+           <div class="dropdown">
+   
+    <a href="#">Shop</a>
+    
+    <div class="dropdown-content">
+      
+      <a class="asd" href="Vegetables.jsp">Vegetables</a>
+      <a href="bakery.jsp">Fresh Fruits</a>
+        <a href="Meat.jsp">Fresh Meats</a>
+      <a href="Dairy.jsp">Dairy Products</a>
+      
+      
+    </div>
+  </div>
+          
+   <% if (session.getAttribute("email") == null || !java.util.Objects.equals(session.getAttribute("email"), "sureshgayan2001@gmail.com")) { %>
+    <a href="About_1.jsp">About</a>
+<% } %>
 
-          </div>
-          <div id="search-bar" class="search-bar" >
-            <input type="text" placeholder=" Search . . .">
-            <button type="submit" action="" onclick="search()">Search</button>
-        </div>
+<a href="show_review.jsp">Review</a>
+            
+           
+<% if (java.util.Objects.equals(session.getAttribute("email"), "sureshgayan2001@gmail.com")) { %>
+    <a href="Admin.jsp">Admin</a>
+<% } %>
+
+    <%
+    if (session.getAttribute("email") != null) {
+%>
+        <a href="Logout" id="logout-btn" class="">Logout</a>
+<%
+    }
+%>
         
-        <div>
-            <button id="login-btn" onclick="login()">Login</button>
-            <button id="signup-btn" onclick="signup()">Sign Up</button>
-            <button id="cart-btn" onclick="addToCart()">Add to Cart</button>
-        </div>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+               
+            
+          <% 
+        String userEmail = (String)session.getAttribute("email");
+        String cartButtonId = (userEmail == null) ? "restricted-cart-btn" : "cart-btn";
+    %>
+    
+    <div id="<%= cartButtonId %>" class="fas fa-shopping-cart"></div>
+    
+            
+               <div id="login-btn" class="fas fa-user"></div>
+    
+</div>
+            
+            
+          
+         
+  
+
+        <form action="" class="search-form">
+            <input type="search" placeholder="Search Here" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+        
     </header>
-
-<!-- 2nd  Navigation -->
-<nav>
-    <a href="index.jsp">Home</a> |
-    <a href="#">Shop</a> |
-    <a href="#">Specials</a> |
-    <a href="#">Contact</a>
     
-    
-  </nav>
-
-    <!-- End Of Header -->
-
-    <script src="script.js"></script>
-
+     <script>
+        const userEmail = "<%= session.getAttribute("email") %>";
+    </script>
+   <script src="cart.js"></script>
+ <script src="js/script.js"></script>
 </body>
+
 </html>
